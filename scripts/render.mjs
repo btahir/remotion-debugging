@@ -7,14 +7,16 @@ const compositionId = "MyComp";
  
 // You only have to create a bundle once, and you may reuse it
 const bundleLocation = await bundle({
-  entryPoint: path.resolve("./src/index"),
+  entryPoint: path.resolve("./src/index.ts"),
   // If you have a Webpack override, make sure to add it here
   webpackOverride: (config) => config,
 });
  
 // Parametrize the video by passing arbitrary props to your component.
 const inputProps = {
-  foo: "bar",
+  titleText: 'Welcome to Remotion with Tailwind CSS',
+  titleColor: '#000000',
+  logoColor: '#00bfff',
 };
  
 // Get the composition you want to render. Pass inputProps if you want to customize the
